@@ -1,0 +1,62 @@
+        <ion-header-bar class="bar-assertive">
+        <h1 class="hidden">Settings</h1>
+            <button class="button button-icon icon ion-navicon"></button>
+            <h1 class="title">Settings</h1>
+        </ion-header-bar>
+
+    <ion-content class="has-subheader settings">
+		<h1 class="hidden">Pokemon API | Setting</h1>
+
+			<ul class="list">	
+				<li class="item aboutMe">
+					<a href="#/about">About Page</a>
+				</li>
+			  <li class="item item-toggle">
+			     Boy
+			     <label class="toggle toggle-positive">
+			       <input type="checkbox">
+			       <div class="track">
+			       	<h1 class="hidden">Track</h1>
+			         <div class="handle"></div>
+			       </div>
+			     </label>
+			  </li>
+				<li class="item item-toggle">
+			     Girl
+			     <label class="toggle toggle-positive">
+			       <input type="checkbox">
+			       <div class="track">
+			       	<h1 class="hidden">Track</h1>
+			         <div class="handle"></div>
+			       </div>
+			     </label>
+			  </li>
+
+			    <ion-checkbox ng-model="filter.blue">Pokemon</ion-checkbox>
+  				<ion-checkbox ng-model="filter.yellow">Pokedex</ion-checkbox>
+  				<ion-checkbox ng-model="filter.pink">Mewtwo</ion-checkbox>
+
+  				  <div class="item range range-positive">
+  				  <h1 class="hidden">Pokedex WiFi Range</h1>
+					   <i class="icon ion-ios-game-controller-a"></i>
+					   	<input type="range" name="volume" min="0" max="100" value="33">
+					   <i class="icon ion-ios-game-controller-a-outline"></i>
+				  </div>
+
+				<label class="item item-input item-select">
+				    <div class="input-label">
+				    <h1 class="hidden">Pokemon Games</h1>
+				      Pokemon Games
+				    </div>
+				    <select>
+				      <option>Red</option>
+				      <option selected>Green</option>
+				      <option>Blue</option>
+				      <option>Yellow</option>
+				      <option>Gold</option>
+				      <option>Silver</option>
+				    </select>
+			  	</label>
+			</ul>
+
+	</ion-content>
