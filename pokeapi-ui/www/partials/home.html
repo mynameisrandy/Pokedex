@@ -1,0 +1,29 @@
+<div class="bar bar-header bar-assertive">
+    <h1 class="title">Pokemon</h1>
+</div>
+
+<ion-content class="has-header">
+    <ion-list>
+        <ion-item ng-repeat="pokemon in pokemons">
+            {{pokemon.pokemon_species.name}}
+        </ion-item>
+    </ion-list>
+</ion-content>
+
+<div class="tabs-striped tabs-color-assertive">
+    <div class="tabs">
+        <a class="tab-item active" href="#">
+            <i class="icon ion-home"></i>
+            Test
+        </a>
+        <a class="tab-item" href="#">
+            <i class="icon ion-star"></i>
+            Favorites
+        </a>
+        <a class="tab-item" href="#">
+            <i class="icon ion-gear-a"></i>
+            Settings
+        </a>
+    </div>
+</div>
+  
