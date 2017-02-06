@@ -27,3 +27,8 @@ pokeapi.controller('kantoPokemonCtrl', ['$scope', function ($scope) {
 }]);
 
 
+pokeapi.controller('pokemonDetailsCtrl', ['$scope', '$stateParams', 'pokeFactory', function ($scope, $stateParams, pokeFactory) {
+
+
+
+}]);

@@ -35,6 +35,18 @@ pokeapi.config(function ($stateProvider, $urlRouterProvider) {
             controller: 'pokemonCtrl'
         })
 
+        .state('pokemon', {
+            url: '/pokemon/:pokemonID',
+            templateUrl: 'partials/pokemon-details.html',
+            controller: 'pokemonDetailsCtrl'
+        })
+
+
+        .state('kantosregion', {
+            url: '/kantos',
+            templateUrl: '',
+            controller: ''
+        })
     $urlRouterProvider.otherwise('/home');
 
 });

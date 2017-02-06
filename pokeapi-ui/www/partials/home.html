@@ -4,8 +4,8 @@
 
 <ion-content class="has-header">
     <ion-list>
-        <ion-item ng-repeat="pokemon in pokemons">
-            {{pokemon.pokemon_species.name}}
+        <ion-item ng-repeat="pokemon in pokemons" href="/pokemon/{{$index}}">
+            {{pokemon.pokemon_species.url}}
         </ion-item>
     </ion-list>
 </ion-content>

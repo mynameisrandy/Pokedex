@@ -16,7 +16,9 @@ pokeapi.factory('pokeFactory', ['$http', function ($http) {
 
 
     // Get Pokemon
-
+    _pokeFactory.getPokemon = function (id) {
+        return $http.get("http://pokeapi.co/api/v2/pokemon-species/" + id);
+    }
 
     return _pokeFactory;
 
