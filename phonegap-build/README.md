@@ -1,2 +1,0 @@
-# pokemonapi
-PhoneGap Build
