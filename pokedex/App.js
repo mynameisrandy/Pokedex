@@ -20,6 +20,7 @@ const RootStack =  createStackNavigator(
   },
   {
     initialRouteName: 'Pokemons',
+    headerMode: 'none',
   });
 
 

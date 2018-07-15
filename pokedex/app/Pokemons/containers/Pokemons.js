@@ -5,17 +5,21 @@ import PokemonItem from '../../components/PokemonItem';
 
 const styles = StyleSheet.create({
 	container: {
-		flex: 1,
+    flex: 1,
 		justifyContent: 'center',
-		alignContent: 'center',
-		alignItems: 'center',
-		backgroundColor: '#FD1B55'
-	},
+    alignItems: 'center',
+    backgroundColor: '#FD1B55',
+  },
 	listContainer: {
 		flexDirection: 'row',
 		flexWrap: 'wrap',
-    justifyContent: 'center'
-	},
+		justifyContent: 'center',
+  },
+  loadingText: {
+    color: '#ffffff',
+    fontWeight: '500',
+    letterSpacing: 0.5
+  }
 });
 
 export type PokemonProps = {};
@@ -84,13 +88,17 @@ export default class Pokemons extends Component<PokemonProps, PokemonState> {
 
 		return (
 			<View style={styles.container}>
-				{isLoading ? (
-					<Text>POKEDEX LOADING</Text>
-				) : (
-					<ScrollView>
-						<View style={styles.listContainer}>{getPokemons}</View>
-					</ScrollView>
-				)}
+				{
+          isLoading ? (
+            <View style={styles.container}>
+					    <Text style={styles.loadingText}>POKEDEX LOADING</Text>
+            </View>
+          ) : (
+            <View style={styles.container}>
+              <View style={styles.listContainer}>{getPokemons}</View>
+            </View>
+          )
+        }
 			</View>
 		);
 	}
