@@ -7,11 +7,16 @@
  */
 
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+// import {Platform, StyleSheet, Text, View} from 'react-native';
 import { createStackNavigator } from 'react-navigation';
 
 import Pokemons from './app/Pokemons/containers/Pokemons';
 import PokemonDetails from './app/Pokemons/containers/PokemonDetails';
+
+import { Provider } from 'react-redux'
+import configureStore from './app/store/configureStore';
+
+const store = configureStore();
 
 const RootStack =  createStackNavigator(
   {
@@ -27,6 +32,10 @@ const RootStack =  createStackNavigator(
 type Props = {};
 export default class App extends Component<Props> {
   render() {
-    return  <RootStack />;
+    return (
+      <Provider store={store}>
+        <RootStack />
+      </Provider>
+    );
   }
 }
